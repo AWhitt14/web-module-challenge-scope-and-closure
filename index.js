@@ -82,8 +82,8 @@ function finalScore(cb,num){
   let h = 0;
   let a = 0;
   for (let i = 0; i <= num; i++){
-   h += cb;
-   a += cb;
+   h += cb();
+   a += cb();
   }
 
 return {
@@ -92,7 +92,7 @@ return {
   };
 }
 
-console.log(finalScore(inning(),9));
+console.log(finalScore(inning,9));
 
 /* Task 4: 
 
@@ -115,8 +115,16 @@ and returns the score at each pont in the game, like so:
 
 Final Score: 6 - 10 */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(cb,num) {
+  let h = 0;
+  let a = 0;
+  for (let i = 0; i < num; i++){
+   h += cb();
+   a += cb();
+   console.log(`${i + 1} inning: ${h} - ${a}`);
+  }
+  console.log(`Final score: ${h} - ${a}`);
 }
 
+scoreboard(inning,9);
 
