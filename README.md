@@ -42,6 +42,9 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+  closure is where you return a function inside of a function, which gives you an answer from it's outer scope from an inner function.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +66,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+  Return function(), because it is returning information that is held in the inner function.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-c. What is the lexical scope of `newRoll`? 
+
+its always returning "Dan rolled a". The only thing that could change is the number the function puts out.
+
+  c. What is the lexical scope of `newRoll`? 
+
+  it is the name parameter because thats the only info the parrent currently holds.
 
 ### Task 3 - Stretch Goals
 
